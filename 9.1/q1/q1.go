@@ -1,30 +1,26 @@
 package main
 
-import (
-	"fmt"
-	"net/http"
-	"strings"
-)
+import "fmt"
 
 //有效的括号
 //https://leetcode.cn/problems/valid-parentheses/
 func main() {
 
-	url := "https://blog.csdn.net/zyndev"
+	//url := "https://blog.csdn.net/zyndev"
+	//
+	//payload := strings.NewReader("a=111")
+	//
+	//response, err := http.Post(url, "application/x-www-form-urlencoded", payload)
+	//
+	//if err != nil {
+	//	fmt.Printf("%v", err)
+	//} else {
+	//	fmt.Printf("%v", response)
+	//}
 
-	payload := strings.NewReader("a=111")
-
-	response, err := http.Post(url, "application/x-www-form-urlencoded", payload)
-
-	if err != nil {
-		fmt.Printf("%v", err)
-	} else {
-		fmt.Printf("%v", response)
-	}
-
-	//str := "(){}[]({})({)}"
-	//r := isValid(str)
-	//fmt.Printf("%v", r)
+	str := "(){}[]({})({)}"
+	r := isValid(str)
+	fmt.Printf("%v", r)
 }
 
 func isValid(str string) bool {
