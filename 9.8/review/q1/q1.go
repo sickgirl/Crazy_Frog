@@ -14,14 +14,13 @@ func maxDepth(s string) int {
 	max := 0
 	len1 := 0
 	for _, v := range s {
-		temp := string(v)
-		if temp == "(" {
+		if v == '(' {
 			len1++
 		}
-		if temp == ")" {
+		if v == ')' {
 			len1--
 		}
-		if len1 > max {
+		if len1 >= max {
 			max = len1
 		}
 	}
