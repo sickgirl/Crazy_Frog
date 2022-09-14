@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 func main() {
-	s := "RLLR"
+	s := "RLRL"
 	r := balancedStringSplit2(s)
 	fmt.Printf("%v", r)
 }
