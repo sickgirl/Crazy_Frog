@@ -9,7 +9,7 @@ import (
 //https://leetcode.cn/problems/count-asterisks/
 func main() {
 	s := "l|*e*et|c**o|*de|"
-	r := countAsterisks(s)
+	r := countAsterisks2(s)
 	fmt.Printf("%v", r)
 }
 func countAsterisks(s string) int {
@@ -28,6 +28,7 @@ func countAsterisks(s string) int {
 
 func countAsterisks2(s string) (ans int) {
 	sp := strings.Split(s, "|")
+	fmt.Printf("%v", sp)
 	for i := 0; i < len(sp); i += 2 {
 		ans += strings.Count(sp[i], "*")
 	}
