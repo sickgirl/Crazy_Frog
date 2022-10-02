@@ -16,9 +16,9 @@ func main() {
 func minCount(coins []int) int {
 	n := 0
 	for _, v := range coins {
-		times := float64(v) / 2
-		times1 := math.Ceil(times)
-		n += int(times1)
+		temp := float64(v) / 2
+		temp = math.Ceil(temp)
+		n += int(temp)
 	}
 	return n
 }
