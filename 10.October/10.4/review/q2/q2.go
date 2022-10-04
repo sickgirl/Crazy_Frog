@@ -10,8 +10,8 @@ func main() {
 	fmt.Printf("%v", r)
 }
 func subsetXORSum(nums []int) (ans int) {
-	var dfs func(i, cur int)
-	dfs = func(i, cur int) {
+	var dfs func(i int, cur int)
+	dfs = func(i int, cur int) {
 		if i == len(nums) {
 			return
 		}
