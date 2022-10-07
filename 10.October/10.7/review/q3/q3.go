@@ -22,17 +22,17 @@ func restoreString(s string, indices []int) string {
 	var demos []demo
 	for i, v := range s {
 		d1 := demo{
-			name:  v,
-			index: indices[i],
+			v,
+			indices[i],
 		}
 		demos = append(demos, d1)
 	}
-
 	sort.Slice(demos, func(i, j int) bool {
 		return demos[i].index < demos[j].index
 	})
 	for _, v := range demos {
 		r = append(r, v.name)
 	}
+
 	return string(r)
 }
