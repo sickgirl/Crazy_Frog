@@ -10,33 +10,32 @@ func main() {
 	fmt.Printf("%v", res)
 }
 func maxAscendingSum(nums []int) int {
-	n := len(nums)
 	var res []int
-	for i := 0; i < n; i++ {
+	max := 0
+	for i, v := range nums {
+		temp := v
 		tempList := nums[i:]
-		tempSum := 0
-		curent := tempList[0]
-		for i, v := range tempList {
+		sum := 0
+		for i, v1 := range tempList {
 			if i == 0 {
-				tempSum += v
+				sum += v1
 				continue
 			}
-			if v <= curent {
+			if v1 > temp {
+				sum += v1
+				temp = v1
+			} else {
 				break
 			}
-			if v > curent {
-				curent = v
-				tempSum += v
-			}
-
 		}
-		res = append(res, tempSum)
+		res = append(res, sum)
 	}
-	max := 0
+
 	for _, v := range res {
 		if v > max {
 			max = v
 		}
 	}
+
 	return max
 }

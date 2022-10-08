@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//643. 子数组最大平均数 I
+//https://leetcode.cn/problems/maximum-average-subarray-i/
 func main() {
 	nums := []int{5}
 	k := 1
