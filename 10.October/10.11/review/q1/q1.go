@@ -12,10 +12,9 @@ func main() {
 }
 func xorOperation(n int, start int) int {
 	r := 0
-	for i := start; i < 2*n+start; i += 2 {
-		r ^= i
+	for i := 0; i < n; i++ {
+		temp := start + 2*i
+		r ^= temp
 	}
 	return r
 }
-
-//看完题解发现自己纯属多余
