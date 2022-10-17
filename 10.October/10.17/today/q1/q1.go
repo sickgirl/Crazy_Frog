@@ -20,3 +20,6 @@ func numIdenticalPairs(nums []int) int {
 	}
 	return result
 }
+
+//题解: 答案只和 每个值的个数有关   比如 1有3个   那对应的号数对组合  就是  c3,2 =   3 * (3-1) /2 = 3
+//每个值 有n个  则组合为  cn,2   = n(n-1)/2
